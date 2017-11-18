@@ -58,9 +58,9 @@ rm -rf $RPM_BUILD_ROOT
 make 
 
 %install
-make DESTDIR=%{buildroot} pkglibdir=%{directory}/%{_lib}/tcl/Trf%{version} install
+make DESTDIR=%{buildroot} pkglibdir=%{tcl_archdir}/Trf%{version} install
 
-mv %{buildroot}%{directory}/%{_lib}/tcl/Trf%{version}/libTrfstub2.1.4.a %{buildroot}%{directory}/%{_lib}/tcl/libTrfstub2.1.4.a
+mv %{buildroot}%{tcl_archdir}/Trf%{version}/libTrfstub2.1.4.a %{buildroot}%{tcl_archdir}/libTrfstub2.1.4.a
 
 %clean
 rm -rf %buildroot
@@ -68,12 +68,10 @@ rm -rf %buildroot
 %files
 %doc doc/license.terms README ChangeLog
 %defattr(-,root,root)
-%{directory}/%{_lib}/tcl/Trf%{version}
-%{directory}/%{_lib}/tcl/Trf%{version}/pkgIndex.tcl
-%{directory}/%{_lib}/tcl/Trf%{version}/libTrf2.1.4.so
+%{tcl_archdir}/Trf%{version}
 
 %files devel
-%{directory}/%{_lib}/tcl/libTrfstub2.1.4.a
+%{tcl_archdir}/libTrfstub2.1.4.a
 %{_includedir}/transform.h
 %{_includedir}/trfDecls.h
 
