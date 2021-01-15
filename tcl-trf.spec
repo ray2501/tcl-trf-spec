@@ -6,7 +6,7 @@ Name:          tcl-trf
 Summary:       Tcl extension providing "transformer" commands
 Version:       2.1.4
 Release:       1
-License:       Tcl and MIT and BSD
+License:       TCL
 Group:         Development/Libraries/Tcl
 Source:        trf2.1.4.tar.gz
 URL:           http://tcltrf.sourceforge.net
